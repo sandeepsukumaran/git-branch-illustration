@@ -1,5 +1,19 @@
-# An illustration of some git branching principles
+# An illustration of a three branched approach to maintain codebases
 
+### General guidelines
+The following cases can be distilled into a few key points:
+1. When working _alone_ on a feature branch, bring in changes from the base branch often by _rebasing_ the feature branch _onto_ the base branch.
+2. In case of pair programming, one person can assume responsibility to freeze and update the remote with a force push, after which everyone else checks out a fresh copy of the branch.
+4. Always use pull requests to contribute code to shared/busy branches. Prefer merging PRs using the rebase and merge strategy to retain granularity while maintaining a linear history. The flipside of this coin - tailor your PRs to have meaningful commits (squash/rebase locally, edit commit messages).
+5. **NEVER** force-push to a branch you do not "own".
+
+<hr/>
+
+## Illustrations
+This document assumes the three branches in question are:
+1. `main` - the long running working branch
+2. `release` - the long runnin release branch. At any point, the `HEAD` of release is present in production environments. Contains tags that indicate the history of release points.
+3. `release-M.m.p` - the ephemeral release candidate branch. Created when a release is planned, branching off from the `HEAD` of `release`. Changes to it are brought in from `main` via PRs from cherry picks. After a release, this is merged back into `release` and deleted.
 
 ### Case 1: The happy path
 
