@@ -54,3 +54,5 @@ Release the patch changes from last stable point and update the subsequent relea
 
 To update, **delete** the local copy of `release-1.2` and **checkout a _fresh_ copy** of `release-1.2` from remote:
 <img width="1029" alt="image" src="https://user-images.githubusercontent.com/10478594/129960382-751422f8-f94e-4ed0-99aa-fa845e3b1f1b.png">
+
+Everyone now has the up-to-date version of the release candidate.
