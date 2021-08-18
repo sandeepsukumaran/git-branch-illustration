@@ -15,4 +15,4 @@ The release candidate branch, `release-1.1` is created from the last release poi
 
 After the release, the release candidate branch, `release-1.1` is merged into the base `release` branch using the **Rebase and Merge** strategy:
 <img width="1029" alt="image" src="https://user-images.githubusercontent.com/10478594/129954724-75e02c42-2279-4709-ab62-f94ca572c4a5.png">
-After this, the `HEAD` of the `release` branch is tagged to mark the new release point.
+After this, the `HEAD` of the `release` branch is tagged to mark the new release point. The release candidate branch is deleted.
